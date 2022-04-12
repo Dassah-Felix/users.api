@@ -1,11 +1,4 @@
-const fs = require("fs")
-
-let books = [];
-
-fs.readFile("../data/books", (err, data)=>{
-    if (err) throw err;
-    books.JSON.parse(data);
-})
+const books = require ("../data/books")
 
 const booksHandlers ={};
 
@@ -27,3 +20,4 @@ booksHandlers.byAuthor = (req, res, next)=>{
     }
     next()
 };
+module.exports =booksHandlers
